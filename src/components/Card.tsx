@@ -51,6 +51,7 @@ const Card: React.FC<CardProps> = ({ view }) => {
                 width={203}
                 height={203}
                 priority={true}
+                fetchPriority="high"
               />
               <div className={view === 'grid' ? '' : s.container__list}>
                 <div
