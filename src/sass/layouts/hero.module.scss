@@ -1,0 +1,95 @@
+@import '../utils/container';
+@import '../utils/mixins';
+@include slideAnimation('slideIn', '0', '100%', '0', '0', '0', '1');
+
+.hero {
+  animation: slideIn 1.2s ease forwards;
+
+  background: url('../../../public/Vector2.png') no-repeat bottom right,
+    url('../../../public/Vector.png') no-repeat top left;
+  background-size: auto;
+
+  background-size: 154px 297px, 549px 332px;
+  background-position: right calc(100% - 10px), top left;
+
+  @include mediaQuery(768px) {
+    background-size: 214px 367px, 689px 385px;
+    background-position: right calc(100% - 50px), top left;
+  }
+  background-color: var(--background);
+}
+.hero__container {
+  width: 836px;
+  padding-top: 462px;
+  padding-bottom: 200px;
+
+  @include mediaMaxQuery(900px) {
+    width: 625px;
+  }
+  @include mediaMaxQuery(768px) {
+    width: 414px;
+  }
+  @include mediaMaxQuery(500px) {
+    width: 203px;
+  }
+
+  @include mediaQuery(768px) {
+    padding-top: 190px;
+  }
+}
+.hero__container__list {
+  width: 836px;
+  padding-top: 462px;
+  padding-bottom: 200px;
+  @include mediaQuery(768px) {
+    padding-top: 190px;
+  }
+  @include mediaMaxQuery(900px) {
+    width: 625px;
+  }
+  @include mediaMaxQuery(768px) {
+    width: 480px;
+  }
+  @include mediaMaxQuery(500px) {
+    width: 300px;
+  }
+}
+.hero__box__icon {
+  display: flex;
+  justify-content: flex-end;
+  gap: 21px;
+  margin-bottom: 23px;
+}
+.hero__icon {
+  width: 24px;
+  height: 22px;
+  cursor: pointer;
+  color: var(--color-blue);
+  transition: all 0.3s;
+  &:focus,
+  &:active {
+    scale: 0.7;
+  }
+}
+.hero__icon__active {
+  color: var(--color-icon-active);
+}
+.hero__button {
+  display: flex;
+  outline: none;
+  border: 1px solid var(--color-grey);
+  border-radius: 14px;
+  background-color: transparent;
+  max-width: 121px;
+  color: var(--color-grey);
+  @include font(11px, 500, 12px);
+  padding: 7px 26px;
+  width: 100%;
+  margin: 0 auto;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+  }
+}

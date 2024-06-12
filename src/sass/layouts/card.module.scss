@@ -1,0 +1,108 @@
+@import '../utils/container';
+@import '../utils/mixins';
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 8px;
+  padding-bottom: 16px;
+}
+.item {
+  background-color: var(--background-item);
+}
+.item__box__grid {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 12px 24px 12px;
+}
+.item__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  @include font(16px, 500, 19px);
+}
+.box__grid__item__icon {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.text {
+  @include flex();
+  gap: 6px;
+}
+.icon {
+  font-size: 18px;
+}
+.chip {
+  @include font(14px, 500, 16px);
+}
+
+.item__box__button__grid {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px 18px 12px;
+}
+
+.button {
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  @include font(14px, 500, 16px);
+}
+.text__data {
+  @include font(12px, 500, 14px);
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px;
+}
+.item__list {
+  @include flex();
+  background-color: var(--background-item);
+}
+.card__img__list {
+  width: 86px;
+  height: 86px;
+}
+.container__list {
+  @include flex();
+  width: 100%;
+  @include mediaQuery(768px) {
+    padding-left: 30px;
+  }
+}
+.item__box__list {
+  @include flex();
+  width: 100%;
+  @include mediaMaxQuery(768px) {
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 0;
+  }
+}
+
+.box__list__item__icon {
+  @include flex();
+  gap: 18px;
+  padding-top: 7px;
+}
+.box__list__item__heart {
+  margin: 0 auto;
+}
+.item__box__button__list {
+  width: 111px;
+  margin-right: 79px;
+  @include mediaMaxQuery(900px) {
+    margin-right: 30px;
+  }
+}
+.button__list {
+  padding-bottom: 7px;
+}
