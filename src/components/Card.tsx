@@ -4,29 +4,11 @@ import { MdModeComment } from 'react-icons/md';
 import data from '../../data.json';
 import s from '@/sass/layouts/card.module.scss';
 
-import { MdOutlineCloudUpload } from 'react-icons/md';
-import { useEffect, useState } from 'react';
-
 interface CardProps {
   view: 'grid' | 'list';
 }
 
 const Card: React.FC<CardProps> = ({ view }) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
     <ul className={view === 'grid' ? s.grid : s.list}>
       {data &&
@@ -117,7 +99,7 @@ const Card: React.FC<CardProps> = ({ view }) => {
                     }
                   }`}
                   >
-                    {isMobile ? <MdOutlineCloudUpload /> : 'Image upload'}
+                    Image upload
                   </button>
                   <p className={s.text__data}>{data}</p>
                 </div>

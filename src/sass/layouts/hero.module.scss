@@ -38,20 +38,11 @@
   }
 }
 .hero__container__list {
-  width: 836px;
+  max-width: 836px;
   padding-top: 462px;
   padding-bottom: 200px;
   @include mediaQuery(768px) {
     padding-top: 190px;
-  }
-  @include mediaMaxQuery(900px) {
-    width: 625px;
-  }
-  @include mediaMaxQuery(768px) {
-    width: 480px;
-  }
-  @include mediaMaxQuery(500px) {
-    width: 300px;
   }
 }
 .hero__box__icon {
@@ -82,7 +73,7 @@
   background-color: transparent;
   max-width: 121px;
   color: var(--color-grey);
-  @include font(11px, 500, 12px);
+  @include font(9px, 2vw, 11px, 500, 12px);
   padding: 7px 26px;
   width: 100%;
   margin: 0 auto;

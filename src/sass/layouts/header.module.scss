@@ -49,10 +49,10 @@
   margin-bottom: 16px;
 }
 .header__title {
-  @include font(24px, 500, 29px);
+  @include font(16px, 2vw, 24px, 500, 29px);
 }
 .header__start {
-  @include font(13px, 400, 15px);
+  @include font(11px, 2vw, 13px, 400, 15px);
   color: var(--color-blue);
   padding: 6px 12px;
   border: 1px solid var(--color-blue);
@@ -70,11 +70,11 @@
   margin-right: 17px;
 }
 .header__chip {
-  @include font(14px, 700, 16px);
+  @include font(12px, 2vw, 14px, 700, 16px);
 }
 .header__text {
   padding-left: 5px;
-  @include font(14px, 400, 16px);
+  @include font(12px, 2vw, 14px, 400, 16px);
 }
 .header__box__date {
   @include flex();
@@ -85,7 +85,7 @@
   }
 }
 .header__date {
-  @include font(16px, 400, 19px);
+  @include font(14px, 2vw, 16px, 400, 19px);
   @include mediaQuery(768px) {
     margin-right: 11px;
   }
@@ -110,7 +110,7 @@
   border: 1px solid var(--header-input);
   border-radius: 4px;
   height: 28px;
-  @include font(13px, 400, 15px);
+  @include font(11px, 2vw, 13px, 400, 15px);
   color: var(--color-input);
   padding-left: 8px;
 }

@@ -8,10 +8,18 @@
     @content;
   }
 }
-@mixin font($fs: 14px, $fw: 400px, $lh: 14px) {
-  font-size: $fs;
+
+@mixin font(
+  $fsMin: 14px,
+  $fsPreferred: 2vw,
+  $fsMax: 24px,
+  $fw: 400,
+  $lh: 14px
+) {
+  --computed-font-size: clamp(#{$fsMin}, #{$fsPreferred}, #{$fsMax});
+  font-size: var(--computed-font-size);
   font-weight: $fw;
-  line-height: $lh / $fs;
+  line-height: calc(var(--computed-font-size) * #{$lh});
 }
 @mixin slideAnimation($name, $startX, $startY, $endX, $endY, $startO, $endO) {
   @keyframes #{$name} {
